@@ -8,14 +8,22 @@ Savepoint.Protocol v1.0 — Canonical Public Release (2025-04-08)
 
 ---
 
-# Savepoint Protocol
+# Savepoint.Protocol
 
-**Trace your thinking. Don’t just remember—author.**  
-_Savepoint is the machete, not the map._
+> **Canonical Public Release**: v1.0 (2025-04-08)  
+> **Protocol Syntax Version**: 3.0  
+> **Author**: Peter Salvato  
+> © 2025 Peter Salvato. All rights reserved.  
+> All terminology, structure, and logic protected under custom license.
 
-Savepoint Protocol is a minimal, timestamped markup system for capturing **cognitive turning points**—the moments when phrasing lands, realizations click, or meaning shifts.
+---
 
-It’s not memory. It’s authorship infrastructure.  
+## Trace your thinking. Don’t just remember—author.  
+*Savepoint is the machete, not the map.*
+
+**Savepoint.Protocol** is a semantic markup system for capturing **cognitive turning points**—the precise moments when realization clicks, phrasing locks in, or meaning shifts direction.
+
+It’s not about memory. It’s **authorship infrastructure**.  
 Built for thinkers in wild terrain.
 
 ---
@@ -23,112 +31,135 @@ Built for thinkers in wild terrain.
 ## Semantic Cartography for the Mind
 
 > Thought doesn’t arrive in order. It arrives like a jungle—dense, recursive, and overgrown.  
-> Savepoint Protocol isn’t a vault. It’s a **trail marker system**.
+> Savepoint isn’t a vault. It’s a **trail-marker protocol**.
 
-Each `<savepoint>` is a deliberate notch in your cognitive path:  
+Each Savepoint is a semantic notch in your cognitive path:  
 You were **here**. This **mattered**. Come back **if needed**.
 
 ---
 
 ## Why Savepoint Exists
 
-As AI systems adopt passive memory, the risk isn’t forgetting—it’s **losing authorship**.
+As LLMs, systems, and apps build passive memory, the threat is no longer forgetting.  
+It’s **losing authorship**.
 
-- AI memory captures facts.  
+- AI remembers facts.  
 - **You** capture meaning.
 
-Savepoint helps you:
-- Preserve phrasing that *locked in*
-- Mark realizations that *reframed everything*
-- Trace how your thoughts actually *evolved*
+Savepoints let you:
+- Preserve phrases that *snapped things into place*  
+- Mark realizations that *reframed your entire model*  
+- Log internal versions of your thinking as it **actually evolved**
 
-It’s for writers, designers, researchers, coders—  
+Savepoint is for writers, researchers, designers, developers—  
 **anyone who thinks recursively and wants to leave a trail.**
 
 ---
 
-## How It Works
+## Canonical Syntax (v3.0)
 
-Each Savepoint session is a timestamped `.md` log—  
-lightweight, versionable, and machine-readable.
+Savepoints use a **self-closing tag** with strict symbolic rules:
 
-## Use Cases
+```plaintext
+<Savepoint
+  protocol_version:3.0
+  category:system_logic
+  function:declaration
+  timestamp:2025-04-08T15:43:00Z
+  importance:high
+  influence:Order of the Ætherwright
+  # Recursive structures should replace version snapshots wherever drift is likely.
+/>
+```
+Required Fields
 
-Writers tracking when language finally clicked
+    protocol_version: always declared (current = 3.0)
 
-Designers preserving layout metaphors or system shifts
+    category: the domain or focus area (design_note, model_shift, etc.)
 
-Researchers marking conceptual pivots in literature review
+    function: the role of this Savepoint (declaration, revision, drift_detected, etc.)
 
-Coders logging paradigm or architecture realizations
+    timestamp: UTC ISO 8601 (2025-04-08T15:43:00Z)
 
-Philosophers noting when internal logic changed direction
+    # content line: your actual semantic inflection
 
+Optional Fields
 
+    importance: high, medium, low
 
----
+    confidence: self-assessed certainty
 
-Savepoint CLI Tool
+    influence: attributed origin (person, work, system)
 
-> Now available: extract .savepoint.md files from exported ChatGPT logs.
+→ Full syntax spec: /spec/savepoint-spec-v1.md
+How It Works
 
+Each Savepoint session is a plaintext .md log—
+Lightweight. Versionable. Human-authored. Machine-readable.
 
+Write Savepoints manually
+OR extract them from AI logs, shell output, or analog tools.
+Use Cases
+
+    Writers capturing final phrasing breakthroughs
+
+    Designers preserving spatial or system logic shifts
+
+    Researchers logging conceptual pivots
+
+    Developers marking architecture-level insight
+
+    Philosophers tracing when internal logic evolved
+
+CLI Tool
+
+Savepoint CLI tool now available for ChatGPT export parsing.
 
 git clone https://github.com/peterSalvato/savepoint-protocol.git
 cd savepoint-protocol
 python cli/savepoint_split.py conversations.json
 
-Converts a conversations.json file (from ChatGPT export)
-into individual Savepoint sessions
+    Converts conversations.json into individual Savepoint .md sessions
 
-Outputs timestamped, Git-ready .md files
+    Outputs timestamped, Git-ready files
 
+    Requires Python 3.7+
 
-Requires Python 3.7+
+Repo Structure
 
-
----
-
-Repo Overview
-
-/spec/ – Protocol structure and rules
-
-/cli/ – Functional tools (e.g., log splitter)
-
-/examples/ – Sample Savepoint sessions
-
-/.savepoints/ – Actual working logs
-
-/docs/ – Extended philosophy and integration docs
-
-
-
----
+/spec/         → Canonical protocol format + syntax
+/cli/          → Functional tools (e.g., log extractor)
+/examples/     → Example Savepoint sessions
+/.savepoints/  → Real-world authored logs
+/docs/         → Extended doctrine + integrations
 
 Philosophy
 
-Savepoint Protocol is intentionally low-tech and high-trust.
-It degrades gracefully.
-It works offline.
-It makes no assumptions about your stack, your memory, or your tools.
+Savepoint.Protocol is intentionally:
 
-When the forest regrows, the Savepoints remain.
-They let you return—not just to what you knew, but to how you came to know it.
+    Low-tech
+
+    High-trust
+
+    Degradable across formats
+
+    Stack-agnostic and offline-capable
+
+It resists feature creep.
+It honors inflection over information.
+It assumes one thing: you’ll want to find your way back.
+
+    When the forest regrows, the Savepoints remain.
 
 → Read the full philosophy
-
-
----
-
 License
 
-Licensed under custom humanist license.
-Use freely, fork deeply—but preserve authorship and intent.
+Licensed under a custom humanist license:
+Use freely. Fork deeply. But preserve authorship and intent.
 
-
----
-
+See: license.md
 Author
 
-Designed by Peter Salvato
-Part of a broader system of authored infrastructure, symbolic tooling, and design protocols.
+Peter Salvato
+Designer of authored infrastructure, symbolic tooling, and cognitive protocols.
+Part of the broader system architecture behind Order of the Ætherwright.
