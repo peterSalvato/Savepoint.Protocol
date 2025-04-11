@@ -1,4 +1,3 @@
-Savepoint.Protocol v1.0 — Canonical Public Release (2025-04-08)
 # Savepoint.Protocol
 
 > Canonical Public Release: v1.0 (2025-04-08)  
@@ -38,14 +37,13 @@ It’s losing authorship.
 - You remember meaning
 
 Savepoints let you:
-- Preserve phrasing that snapped things into place
-- Mark realizations that reframed your model
+- Preserve phrasing that snapped things into place  
+- Mark realizations that reframed your model  
 - Log internal versions of your thinking as it evolved
 
 Use it if you write, design, code, research, reflect, or resist.
 
 ---
-
 
 ## Use Cases
 
@@ -56,7 +54,6 @@ Use it if you write, design, code, research, reflect, or resist.
 - Philosophers noting directional changes in internal logic
 
 ---
-
 
 ## Canonical Syntax (v3.0)
 
@@ -73,74 +70,86 @@ Savepoints are declared using a self-closing tag:
   # Recursive structures should replace version snapshots wherever drift is likely.
 />
 ```
-## Required Fields:
-```
-    protocol_version: always declared (current = 3.0)
-    category: domain of reflection (e.g. design_note, model_shift)
-    function: purpose of the Savepoint (declaration, revision, drift_detected)
-    timestamp: ISO 8601 UTC (e.g. 2025-04-08T15:43:00Z)
-    #: final line, the semantic content
-```
-## Optional Fields:
-```
-    importance: high, medium, low
-    confidence: self-assessed certainty
-    influence: sources, systems, or individuals
-```
-See the full specification: /spec/savepoint-spec-v1.md
 
+### Required Fields
+
+- `protocol_version`: always declared (current = 3.0)  
+- `category`: domain of reflection (e.g. `design_note`, `model_shift`)  
+- `function`: purpose of the Savepoint (`declaration`, `revision`, `drift_detected`)  
+- `timestamp`: ISO 8601 UTC format (e.g. `2025-04-08T15:43:00Z`)  
+- `#`: final line — the semantic content of the Savepoint
+
+### Optional Fields
+
+- `importance`: `high`, `medium`, `low`  
+- `confidence`: self-assessed certainty  
+- `influence`: attributed source, reference, or origin
+
+**See full spec**: [spec/savepoint-spec-v1.md](spec/savepoint-spec-v1.md)
+
+---
 
 ## CLI Tool
 
-Savepoint CLI tool available for extracting ChatGPT exports into Savepoint sessions:
+Savepoint CLI tool available for extracting ChatGPT export logs into structured Savepoint sessions:
 
+```bash
 git clone https://github.com/peterSalvato/savepoint-protocol.git
 cd savepoint-protocol
 python cli/savepoint_split.py conversations.json
+```
 
- - Converts conversations.json into timestamped Savepoint .md files
- - Produces Git-ready plaintext logs
- - Requires Python 3.7+
+- Converts `conversations.json` into timestamped Savepoint `.md` files  
+- Produces Git-ready plaintext logs  
+- Requires Python 3.7+
 
-Tool location: /cli/savepoint_split.py
+Tool location: [cli/savepoint_split.py](cli/savepoint_split.py)
 
+---
 
 ## Repository Structure
 
+```text
 /spec/         → Canonical protocol syntax and rules  
 /cli/          → CLI tools (e.g., log parser)  
 /examples/     → Sample Savepoint sessions  
 /.savepoints/  → Real-world authored Savepoints  
 /docs/         → Extended philosophy and integration
+```
 
+---
 
 ## Philosophy
 
 Savepoint is:
- - Low-tech
- - High-trust
- - Format-agnostic
- - Offline-compatible
- - Degradable across AI, shell, and analog workflows
+- Low-tech  
+- High-trust  
+- Format-agnostic  
+- Offline-compatible  
+- Degradable across AI, shell, and analog workflows
 
-It resists feature creep.
-It honors inflection over information.
+It resists feature creep.  
+It honors inflection over information.  
 It assumes one thing: you’ll want to find your way back.
 
 When the forest regrows, the Savepoints remain.
 
-Read the full philosophy: /docs/philosophy.md
+Read the full philosophy: [docs/philosophy.md](docs/philosophy.md)
 
+---
 
 ## License
-Savepoint.Protocol is licensed under a custom humanist license.
+
+Savepoint.Protocol is licensed under a custom humanist license.  
 Use freely. Fork deeply. But preserve authorship and intent.
 
-See: /license.md
+License: [license.md](license.md)
 
+---
 
-#### Author
+## Author
 
-Peter Salvato
-Designer of authored infrastructure, symbolic tooling, and cognitive protocols.
-Part of the broader system: Order of the Ætherwright
+**Peter Salvato**  
+Designer of authored infrastructure, symbolic tooling, and cognitive protocols.  
+Part of the broader system: [Order of the Ætherwright](https://github.com/peterSalvato/order-of-the-aetherwright)
+
