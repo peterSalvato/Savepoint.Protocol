@@ -52,53 +52,7 @@ It’s for writers, designers, researchers, coders—
 Each Savepoint session is a timestamped `.md` log—  
 lightweight, versionable, and machine-readable.
 
-```txt
-<session 2025-04-10-2 | Savepoint.Protocol | opened 16:04>
-
-<savepoint 16:07>
-That metaphor finally locked in: “Savepoints aren’t memories, they’re commits.”
-#language #realization
-
-<savepoint 16:13>
-This changes the purpose of the spec—this isn’t note-taking, this is cartography.
-#framing #specification
-
-</session>
-
-
----
-
-Syntax Summary
-
-> Savepoint syntax is the interface.
-Simple enough to write by hand.
-Structured enough to parse, grep, or synthesize.
-
-
-
-<session YYYY-MM-DD-N | Context | opened HH:MM>
-
-<savepoint HH:MM>
-Realization, phrasing, or shift.
-#hashtags
-</savepoint>
-
-<meta project="Optional" mood="Optional" tool="Optional">
-</session>
-
-Supports retro: and summary flags
-
-Compatible with AI tools and plain-text grep
-
-Designed for version control + later synthesis
-
-
-→ Full syntax spec
-
-
----
-
-Use Cases
+## Use Cases
 
 Writers tracking when language finally clicked
 
