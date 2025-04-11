@@ -1,18 +1,10 @@
 Savepoint.Protocol v1.0 — Canonical Public Release (2025-04-08)
 # Savepoint.Protocol
 
-> Authored by Peter Salvato
-> Protocol Version: 3.0  
-> Repository Release: 1.0  
-> © 2025 Peter Salvato. All rights reserved. All terminology, structure, and logic protected.
-
----
-
-# Savepoint.Protocol
-
 > **Canonical Public Release**: v1.0 (2025-04-08)  
 > **Protocol Syntax Version**: 3.0  
 > **Author**: Peter Salvato  
+> Repository Release: 1.0  
 > © 2025 Peter Salvato. All rights reserved.  
 > All terminology, structure, and logic protected under custom license.
 
@@ -71,28 +63,23 @@ Savepoints use a **self-closing tag** with strict symbolic rules:
   # Recursive structures should replace version snapshots wherever drift is likely.
 />
 ```
-Required Fields
-
-    protocol_version: always declared (current = 3.0)
-
-    category: the domain or focus area (design_note, model_shift, etc.)
-
-    function: the role of this Savepoint (declaration, revision, drift_detected, etc.)
-
-    timestamp: UTC ISO 8601 (2025-04-08T15:43:00Z)
-
-    # content line: your actual semantic inflection
-
+ Required Fields
+```
+  protocol_version: always declared (current = 3.0)
+  category: the domain or focus area (design_note, model_shift, etc.)
+  function: the role of this Savepoint (declaration, revision, drift_detected, etc.)
+  timestamp: UTC ISO 8601 (2025-04-08T15:43:00Z)
+  # content line: your actual semantic inflection
+```
 Optional Fields
-
-    importance: high, medium, low
-
-    confidence: self-assessed certainty
-
-    influence: attributed origin (person, work, system)
-
+```
+  importance: high, medium, low
+  confidence: self-assessed certainty
+  influence: attributed origin (person, work, system)
+```
 → Full syntax spec: /spec/savepoint-spec-v1.md
-How It Works
+
+## How It Works
 
 Each Savepoint session is a plaintext .md log—
 Lightweight. Versionable. Human-authored. Machine-readable.
@@ -101,65 +88,51 @@ Write Savepoints manually
 OR extract them from AI logs, shell output, or analog tools.
 Use Cases
 
-    Writers capturing final phrasing breakthroughs
+ - Writers capturing final phrasing breakthroughs
+ - Designers preserving spatial or system logic shifts
+ - Researchers logging conceptual pivots
+ - Developers marking architecture-level insight
+ - Philosophers tracing when internal logic evolved
 
-    Designers preserving spatial or system logic shifts
-
-    Researchers logging conceptual pivots
-
-    Developers marking architecture-level insight
-
-    Philosophers tracing when internal logic evolved
-
-CLI Tool
+## CLI Tool
 
 Savepoint CLI tool now available for ChatGPT export parsing.
-
 git clone https://github.com/peterSalvato/savepoint-protocol.git
 cd savepoint-protocol
 python cli/savepoint_split.py conversations.json
 
-    Converts conversations.json into individual Savepoint .md sessions
+ - Converts conversations.json into individual Savepoint .md sessions
+ - Outputs timestamped, Git-ready files
+ - Requires Python 3.7+
 
-    Outputs timestamped, Git-ready files
-
-    Requires Python 3.7+
-
-Repo Structure
-
+## Repo Structure
 /spec/         → Canonical protocol format + syntax
 /cli/          → Functional tools (e.g., log extractor)
 /examples/     → Example Savepoint sessions
 /.savepoints/  → Real-world authored logs
 /docs/         → Extended doctrine + integrations
 
-Philosophy
+## Philosophy
 
 Savepoint.Protocol is intentionally:
-
-    Low-tech
-
-    High-trust
-
-    Degradable across formats
-
-    Stack-agnostic and offline-capable
+ - Low-tech
+ - High-trust
+ - Degradable across formats
+ - Stack-agnostic and offline-capable
 
 It resists feature creep.
 It honors inflection over information.
 It assumes one thing: you’ll want to find your way back.
 
-    When the forest regrows, the Savepoints remain.
-
+When the forest regrows, the Savepoints remain.
 → Read the full philosophy
-License
 
+## License
 Licensed under a custom humanist license:
 Use freely. Fork deeply. But preserve authorship and intent.
+ - See: license.md
 
-See: license.md
-Author
-
+### Author
 Peter Salvato
 Designer of authored infrastructure, symbolic tooling, and cognitive protocols.
 Part of the broader system architecture behind Order of the Ætherwright.
