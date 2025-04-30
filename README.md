@@ -1,3 +1,9 @@
+> This system is currently published for visibility, authorship, and reflective exploration.  
+> It is not open source or commercially licensable at this time.  
+> See LICENSE.md for usage terms.  
+> Contact Peter Salvato directly for consultation, collaboration, or licensing inquiries.
+
+
 # Savepoint.Protocol
 
 > Canonical Public Release: v1.0 (2025-04-08)  
